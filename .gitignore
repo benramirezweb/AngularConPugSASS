@@ -6,6 +6,9 @@
 /tmp
 /out-tsc
 
+#pug
+/src/**/*.html
+
 # dependencies
 /node_modules
 

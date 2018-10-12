@@ -1,0 +1,77 @@
+.hero
+    text-align: center
+    height: 50vh
+    +flex
+    align-items: center
+    flex-direction: column
+    justify-content: center
+    h1
+        font-size: 50px
+        color: $negro
+    h2
+        font-size: 20px
+.ul_grid
+    display: grid
+    grid-template-columns: auto auto auto auto
+    // grid-template-rows: auto auto auto
+    width: 100%
+    max-width: 1280px
+    margin: 0 auto
+    box-shadow: 0px 10px 35px rgba(0,0,0,.2)
+    margin-bottom: 10vh
+    // rid-column-gap: 0
+    // grid-row-gap: 0
+    grid-template-areas: 'big_1 big_1 small_1 small_2' 'big_1 big_1 big_2 big_2' 'small_3 small_4 big_2 big_2'
+    
+    li
+        padding: 20px
+        list-style: none    
+        
+        background: #fff
+        .box > *
+            color: $blanco
+        &.big_1
+            grid-area: big_1
+            background: $grid_azul
+            height: 80vh
+        &.big_2
+            grid-area: big_2
+            background: $grid_morado
+            height: 80vh
+        &.small_1
+            grid-area: small_1
+            background: $grid_azul2
+            height: 40vh
+        &.small_2
+            grid-area: small_2
+            background: $grid_verde
+            height: 40vh
+        &.big_3
+            grid-area: big_3
+            background: $grid_morado
+            height: 40vh
+        &.small_3
+            grid-area: small_3
+            background: $grid_gris
+            height: 40vh
+        &.small_4
+            grid-area: small_4
+            background: $grid_verde2
+            height: 40vh
+@media screen and (max-width: 800px)
+    .ul_grid
+        grid-template-columns: 1fr
+        grid-template-areas: 'big_1' 'big_2' 'small_1' 'small_2' 'small_3' 'small_4'
+        li
+            &.big_1
+                height: 40vh
+            &.big_2
+                height: 40vh
+            &.small_1
+                height: 40vh
+            &.small_2
+                height: 40vh
+            &.small_3
+                height: 40vh
+            &.small_4
+                height: 40vh
